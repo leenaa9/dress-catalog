@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#111111">
+  <title>كتالوج تصاميم الفساتين</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PRIVATE COLLECTION</p>
+        <h1>كتالوج التصاميم</h1>
+      </div>
+      <div class="timer-wrap" aria-label="الوقت المتبقي">
+        <span id="timer">02:00</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p>مرحباً بكِ ✨</p>
+        <h2>تصفحي تصاميمنا الخاصة</h2>
+        <span>لديكِ دقيقتان لاستعراض الكتالوج.</span>
+      </section>
+
+      <div class="controls">
+        <button class="filter active" data-filter="all">الكل</button>
+        <button class="filter" data-filter="evening">سهرة</button>
+        <button class="filter" data-filter="bridal">زفاف</button>
+        <button class="filter" data-filter="special">خاص</button>
+      </div>
+
+      <section id="catalog" class="catalog" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <span>© 2026 Private Dress Collection</span>
+    </footer>
+  </div>
+
+  <div id="expired" class="expired hidden">
+    <div class="expired-card">
+      <div class="lock">🔒</div>
+      <h2>انتهت جلسة التصفح</h2>
+      <p>انتهى الوقت المخصص لمشاهدة الكتالوج.</p>
+      <p>يرجى مسح رمز QR مرة أخرى للبدء بجلسة جديدة.</p>
+      <button id="restartBtn">بدء جلسة جديدة</button>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+    <button id="closeLightbox" class="close" aria-label="إغلاق">×</button>
+    <div class="lightbox-content">
+      <div class="watermark">PRIVATE COLLECTION</div>
+      <img id="lightboxImage" src="" alt="">
+      <h3 id="lightboxTitle"></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
